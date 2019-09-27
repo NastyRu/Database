@@ -1,0 +1,1000 @@
+;Tokyo;236
+;Beijing Shi;96
+;Shanghai;96
+;Buenos Aires;13
+;Bombay;76
+;Karachi;158
+;Constantinople;206
+;Mexico;130
+;New Delhi;76
+;Manila;214
+;Moscow;170
+;Seoul;102
+;Sao Paulo;29
+;Istanbul;206
+;Lagos;142
+;Mexico;130
+;Jakarta;77
+;Edo;236
+;New York;192
+;Kinshasa;100
+;Al-Cairo;69
+;Lima;163
+;Beijing;96
+;London;38
+;Tehran;80
+;Bogotá;98
+;Hong Kong;193
+;Dhaka;18
+;Lahore;158
+;Rio de Janeiro;29
+;Baghdad;79
+;Bangkok;195
+;Bangalore;76
+;Santiago;224
+;Kolkata;76
+;Toronto;91
+;Dagon;137
+;Sydney;1
+;Madras;76
+;Abia;142
+;Wuhan;96
+;Ogun;142
+;St. Petersburg;170
+;Chongqing;96
+;XIan;96
+;Chengdu;96
+;Chittagong;18
+;Los Angeles;192
+;Alexandria;69
+;Tianjin;96
+;Melbourne;1
+;Ahmedabad;76
+;Abidjan;104
+;Busan;102
+;Kano;142
+;Casablanca;127
+;Hyderabad;76
+;Yokohama;236
+;Ibadan;142
+;Singapore;184
+;Ankara;206
+;Shenyang;96
+;Riyadh;176
+;Ho Chi Minh city;45
+;Cape town;234
+;Berlin;56
+;Montreal;91
+;Harbin;96
+;Pyongyang;101
+;Guangzhou;96
+;Durban;234
+;Madrid;83
+;Nanjing;96
+;Kabul;16
+;Pune;76
+;Surat;76
+;Chicago;192
+;Kanpur;76
+;Umm Durman;189
+;Luanda;7
+;Addis Ababa;232
+;Nairobi;93
+;Taiyuan;96
+;Jaipur;76
+;El Salvador;29
+;Dakar;180
+;Dar es Salaam;197
+;Rome;84
+;Yunfu;96
+;Changwat Nakhon Rat SIMA;195
+;Al-Basra;79
+;Osaka;236
+;Mogadishu;188
+;Taegu;102
+;Jeddah;176
+;Changchun;96
+;Taipei;196
+;Kyiv;209
+;Faisalabad;158
+;Izmir;206
+;Lahnau;76
+;Koniya;206
+;Giza;69
+;Tsira;29
+;Cali;98
+;Surabaya;77
+;Timber;206
+;White;29
+;Greater Dakar;180
+;Al Kuwait;106
+;Mashhad;80
+;Brooklyn;192
+;Quezon;214
+;Nagpur;76
+;Harare;74
+;Brazil;29
+;Santo Domingo;68
+;Nagoya;236
+;Havana;105
+;Kosovo;237
+;Aleppo;185
+;Paris;217
+;Changsha;96
+;Jinan;96
+;Al Mawsil;79
+;Tangshan;96
+;Dalian;96
+;Houston;192
+;Johannesburg;234
+;Kowloon;193
+;Al-Basra al-Kadima;79
+;Zhengzhou;96
+;Cheng;96
+;Medellin;98
+;Algeria;5
+;Tashkent;208
+;Al Gar;5
+;Khartoum;189
+;Accra;50
+;Guyaquil;229
+;Maracaibo;40
+;Rabat;127
+;Sapporo;236
+;Jilin;96
+;Hangzhou;96
+;Bucharest;172
+;Nanchang;96
+;Kamine;54
+;Brisbane;1
+;Vancouver;91
+;Indore;76
+;Caracas;40
+;Ecatepec;130
+;Sana;85
+;Chiang Mai;195
+;Medan;77
+;Rawalpindi;158
+;Minsk;22
+;Mosul;79
+;Hamburg;56
+;Curitiba;29
+;Budapest;39
+;Bandung;77
+;Soweto;234
+;Edessa;206
+;Warsaw;165
+;Qingdao;96
+;Guadalajara;130
+;Pretoria;234
+;Alep;185
+;Patna;76
+;Bhopal;76
+;New Patna;76
+;Manaus;29
+;Xinyang;96
+;Kaduna;142
+;Damascus;185
+;Phnom Penh;89
+;Barcelona;83
+;Al-Sham;185
+;Vianne;2
+;Isfahan;80
+;Ludhiana;76
+;Cagnat Hkon Si Thammarat;195
+;Kobe;236
+;Bekasi;77
+;Kaohsiung;196
+;Kaohsiung;196
+;Ciudad Juarez;130
+;Urumqi;96
+;Chiang Rai;195
+;Surin;195
+;Tana;76
+;Recife;29
+;Tai;102
+;Daejeon;102
+;Kampot;50
+;Kyoto;236
+;Doll Lumpur;121
+;Philadelphia;192
+;Karaj;80
+;Perth;1
+;Cordova;13
+;Multan;158
+;Hanoi;45
+;Kharkov;209
+;Agra;76
+;Phoenix;193
+;Tabriz;80
+;Novosibirsk;170
+;Lanzhou;96
+;Gwangju;102
+;Bursa;206
+;Changwat ROI;195
+;Vadodara;76
+;Belem;29
+;Juarez;130
+;Fushun;96
+;Quito;229
+;Fukuoka;236
+;Puebla;130
+;Antananarivo;119
+;Luoyang;96
+;Hefei;96
+;Hyderabad;158
+;Valencia;40
+;Gujranwala;158
+;Barranquilla;98
+;Tijuana;130
+;Lubumbashi;100
+;Porto Alegre;29
+;Tangerang;77
+;Santa Cruz de La Sierra;27
+;Changan;96
+;Kampala;207
+;Kosaeli;206
+;Suzhou;96
+;Kulna;18
+;Douala;90
+;Shantou;96
+;Gorakhpur;76
+;Makassar;77
+;Kawasaki;236
+;Kawasaki;236
+;Montevideo;211
+;Baotou-Shi;96
+;Medina;176
+;Yaounde;90
+;Bamako;122
+;Changwat Songkla;195
+;Nasik;76
+;Changwat Chung Woori;195
+;Semarang;77
+;Ekaterinburg;170
+;San Diego;192
+;Pimpri;76
+;Nizhny Novgorod;170
+;Faridabad;76
+;Davao City;214
+;Aman;78
+;Ciudad de Montevideo;211
+;Lusaka;71
+;Kathmandu;140
+;Hookah;76
+;Thane;76
+;San Antonio;192
+;Stockholm;226
+;Beirut;113
+;Shiraz;80
+;Adana;206
+;Munich;56
+;Suwon;102
+;Suigen;102
+;Palembang;77
+;Port-AU-Prince;47
+;Nezahualcoyotl;130
+;Meerut;76
+;Peshawar;158
+;Rosario;13
+;Central;214
+;Center;214
+;Jizan;176
+;Davao;214
+;Dallas;192
+;Mandalay;138
+;Almaty;87
+;Spetsgorodok;87
+;Bronx;192
+;Changwat Sakon Nakon;195
+;Omdurman;189
+;Mecca;176
+;Ghaziabad;76
+;Anshan;96
+;Xuzhou;96
+;Depok;77
+;Maputo;132
+;Freetown;191
+;Changwat Chayaphum;195
+;Fuzhou;96
+;Changwat Nakhon Sawan;195
+;Rajkot;76
+;Pest;39
+;Guiyang;96
+;Goiania;29
+;Guarulhos;29
+;Prague;223
+;Varanasi;76
+;FEZ;127
+;Milan;84
+;Changwat Of Phetchabun;195
+;Tripoli;114
+;Port Harcourt;142
+;Bali ATA Cliat;81
+;Hiroshima;236
+;Dubai;150
+;Managua;144
+;Dubai;150
+;Samara;170
+;Omsk;170
+;Benin;142
+;Monterrey;130
+;Baku;3
+;Brazzaville;100
+;Belgrade;235
+;Leon;130
+;Maiduguri;142
+;Wuxi;96
+;Kazan;170
+;Al Jadid;127
+;Yerevan;14
+;Amritsar;76
+;Kaisaria;206
+;Copenhagen;64
+;Wagadugu;33
+;Changwat Kalasin;195
+;Taichung;196
+;Jono;236
+;Rostov-on-don;170
+;Adelaide;1
+;Allahabad;76
+;Gaziantep;206
+;Visakhapatnam;76
+;Chelyabinsk;170
+;Sofia;26
+;Unguia UCU;197
+;Datong;96
+;Doug;96
+;Tbilisi;62
+;Changwat Nonthaburi;195
+;Changwat Samut Prakan;195
+;Sendai;236
+;Xianyang;96
+;Ufa;170
+;Songman;102
+;Campinas;29
+;Ouagadougou;33
+;Jabalpur;76
+;Haora;76
+;Huainan;96
+;Dublin;81
+;Kunming;96
+;Brussels;23
+;Aurangabad;76
+;Kulm;80
+;Volgograd;170
+;Aiden;206
+;Shenzhen;96
+;Nova Iguau;29
+;Rongcheng;96
+;Odessa;209
+;Kitakyushu;236
+;Sholapur;76
+;Voting;96
+;Changwat Surat Thani;195
+;Napoli;85
+;Benji;96
+;Zapopan;130
+;Birmingham;38
+;Perm;170
+;Naples;84
+;Erzerum;206
+;Springer;76
+;Zariya;142
+;Guatemala;52
+;Mendoza;13
+;Changwat Of Phitsanulok;195
+;Cologne;56
+;Calgary;91
+;Port Elizabeth;234
+;Arab;189
+;Fes;127
+;Cologne;56
+;Coimbatore;76
+;Maceio;29
+;Cartagena;98
+;Seat;127
+;Changzhou;96
+;Sultan;176
+;Ranchi;76
+;Marrakech;127
+;Changwat Of Nonp High;195
+;Sao Goncalo;29
+;Maha Sarakham;195
+;Changkat Mach Sarakam;195
+;Monrovia;112
+;Irbil;79
+;Malatia;206
+;Jodhpur;76
+;Chiba;236
+;San Luis;29
+;Chandigarh;76
+;Gampheang FET;195
+;Madurai;76
+;Hell Diwaniyah;79
+;Krasnoyarsk;170
+;Huabei;96
+;Cochabamba;27
+;D;80
+;Abu Ghraib;79
+;Adobo;104
+;Guwahati;76
+;ABA;142
+;San Jose;192
+;Bulawayo;74
+;Bishkek;107
+;Pingshan;96
+;Detroit;192
+;Changwat Rat Buri;195
+;Gwalior;76
+;Qiqihar;96
+;Klang;121
+;Safi;127
+;Yangoonabie;206
+;Mbuji-may;100
+;Vijayawada;76
+;Ottawa;91
+;Mysore;76
+;Changwat Suphan Buri;195
+;Wenzhou;96
+;Torino;84
+;Saratov;170
+;Ahwaz;80
+;Tegucigalpa;58
+;Turin;84
+;Naucalpan;130
+;Yes Khoury;135
+;Arequipa;163
+;Voronezh;170
+;Padang;77
+;Hubli;76
+;Marrakech;127
+;Callao;163
+;Lions;209
+;Tucuman;13
+;Tangier;127
+;Changwat Lampang;195
+;Edmonton;91
+;Duque De Caxias;29
+;Joss;142
+;Selling;127
+;Ilorin;142
+;La Paz;27
+;Barquisimeto;40
+;Oslo;148
+;Nanning;96
+;Johor Bahru;121
+;Bandar Lampung;77
+;Cebu city;214
+;Mombasa;93
+;Asgabat;205
+;Jacksonville;192
+;Aleksandrovsk;209
+;The Forehead Of The Storm;195
+;Marseille;217
+;Soot A Fathom;195
+;Kathmandu;140
+;Rupandehi;140
+;Jalandhar;76
+;Thiruvanathapuram;76
+;Sakai;236
+;Anyang;96
+;San Miguel de Tucuman;13
+;Changwat Phra Nakhon Si Ayuthaya;195
+;Villages;76
+;Taroudant;127
+;Reunited;169
+;Trichirapalli;76
+;Khims;185
+;Laughter;96
+;Jiamei;141
+;Khiam;141
+;Indianapolis;192
+;Valencia;83
+;Changwat Nakhon Phanom;195
+;Bogor;77
+;Lodz;165
+;Ad Dammam;176
+;Patumthani;195
+;Hining;96
+;Kermanshah;80
+;Kariz;80
+;Liuzhou;96
+;Cat;76
+;Natal;29
+;Bhubaneswar;76
+;Qinhuangdao;96
+;Hengguang;96
+;Antalya;206
+;Cebu;214
+;Adaliya;206
+;Krakow;165
+;Aligarh;76
+;Da Nang;45
+;Naradhiwas;195
+;Pietermaritzburg;234
+;Taian;96
+;Trujillo;163
+;Scrap;199
+;Scrap;199
+;Malang;77
+;Ciudad Guayana;40
+;Amsterdam;143
+;Kigali;171
+;Barrels;76
+;Kigali;171
+;Kigal;171
+;Teresina;29
+;Poti;29
+;Xijiang;96
+;Sao Bernardo Do Campo;29
+;Hegang;96
+;Riga;109
+;Pelvis;127
+;Astrida;171
+;Columbus;192
+;The JMA;142
+;Tainan;196
+;Quetta;158
+;San Francisco;192
+;Japa;140
+;Campo Grande;29
+;Athens;61
+;Ashgabat;205
+;Sara Pol;16
+;Guidepole;130
+;As Sulaymaniyah;79
+;Dhanuka;140
+;Cucuta;98
+;Moradabad;76
+;Langfang;96
+;Ningbo;96
+;Yantai;96
+;Togliatti;170
+;Merida;130
+;Tlanepantla;130
+;Jerusalem;75
+;Chisinau;133
+;Kailali;140
+;Honjo;102
+;Nouakchott;118
+;Zhuzhou;96
+;Chihuahua;130
+;Bhiwandi;76
+;Jaboatao;29
+;Rajshahi;18
+;Zagreb;329
+;Agadir;127
+;Bosna-Serai;239
+;Eva Peron;13
+;Ringtones;204
+;Zhangjiakou;96
+;Kludge;172
+;Cotonou;24
+;Zigong;96
+;Magenta;96
+;ANOVA;142
+;Tangier;127
+;Liaoyang;96
+;Seville;83
+;Nerima;236
+;La Plata;13
+;Bangui;221
+;Kumamoto;236
+;Raipur;76
+;Austin;192
+;Adiyaman;206
+;Osasco;29
+;San Luis Potosi;130
+;Lewi;195
+;Changwat Loei;195
+;Gorakhpur;76
+;Ipoh;121
+;Zibo;96
+;Palermo;84
+;Changwat Chachoengsao;195
+;MISSISSAUGA;91
+;Taounate;127
+;Puyang;96
+;Nantong;96
+;Changwat Sukhothai;195
+;Sawankhalok Changwat;195
+;Mudanjiang;96
+;Santo Andre;29
+;Pointe-Noire;100
+;Aguascalientes;130
+;Agadir;127
+;Hamilton;91
+;Enugu;142
+;Kryvyi Rih;209
+;Acapulco;130
+;Joan Pessoa;29
+;Ansan;102
+;Benghazi;114
+;Memphis;192
+;Frankfurt am main;56
+;Krasnodar;170
+;Shaoyang;96
+;Guilin;96
+;Sagamihara;236
+;Zamboanga City;214
+;Colombo;228
+;Frankfurt;56
+;Lilongwe;120
+;Wahran;5
+;Mar del Plata;13
+;QC;91
+;Diyarbakir;206
+;New South Memphis;192
+;Memphis;192
+;Ulyanovsk;170
+;Okayama;236
+;Zhanjiang;96
+;Yogyakarta;77
+;Zaragoza;83
+;Wroclaw;165
+;Anyang;102
+;Zhenjiang;96
+;Winnipeg;91
+;Dandong;96
+;Izhevsk;170
+;Shaoguan;96
+;Yancheng;96
+;Foshan;96
+;Natal;29
+;Bili;76
+;Panshan;96
+;Djibouti;65
+;Saltillo;130
+;Ash Balls;150
+;Fort Worth;192
+;Al-Hodeidah;85
+;Jamshedpur;76
+;Tandjile;222
+;Haikou;96
+;Changwat Phichit;195
+;Sao Jose DOS Campos;29
+;Changwat Trang;195
+;Mersin;206
+;Taizhou;96
+;Queretaro;130
+;Hengtai;96
+;Baltimore;192
+;Glasgow;38
+;Yaroslavl;170
+;Elazig;206
+;Benoni;234
+;Hamamatsu;236
+;Kochi;76
+;Amravati;76
+;Rotterdam;143
+;Amaravati;76
+;Abu Dhabi;150
+;Hai Phong;45
+;Aroma;80
+;Genoa;84
+;Islamabad;158
+;Kirkuk;79
+;Barnaul;170
+;Charlotte;192
+;El Paso;192
+;Luancheng;96
+;Mexicali;130
+;Hermosillo;130
+;Rasht;80
+;Dortmund;56
+;Kayseri;206
+;Abeokuta;142
+;Caesarea;206
+;Morelia;130
+;Stuttgart;56
+;Yingkou;96
+;Eiko;96
+;Chimalhuacan;130
+;Zhangzhou;96
+;Vladivostok;170
+;Irkutsk;170
+;Belfast;38
+;Genoa;84
+;Blantyre;120
+;Kingston;235
+;Chiclayo;163
+;Culiacan;130
+;Kutako;76
+;Hachioji;236
+;Milwaukee;192
+;Xiamen;96
+;Khabarovsk;170
+;Ussuri;170
+;Khabarovsk vtoroy;170
+;Libreville;46
+;Kerman;80
+;Dusseldorf;56
+;Kaifeng;96
+;Essen;56
+;Bengbu;96
+;Buckland;76
+;Banjarmasin;77
+;Shihezi;96
+;Bouake;104
+;Bucaramanga;98
+;South Boston;192
+;Kuching;121
+;Poznań;165
+;Seattle;192
+;Veracruz;130
+;Lisbon;166
+;Asmara;230
+;Sokoto;142
+;Uberlandia;29
+;VAO;142
+;The VAO Kadifa;142
+;Funabashi;236
+;Hamhŭng;101
+;Sorocaba;29
+;Helsinki;215
+;Malaga;83
+;Warangal;76
+;Denver;192
+;Santiago;68
+;Santiago de Cuba;105
+;Surakarta;77
+;Kagoshima;236
+;Grain;96
+;Bhavnagar;76
+;Mar De Plata;13
+;Bahawalpur;158
+;Washington;192
+;Zahedan;80
+;Prachuap Khiri Khan Changwat;195
+;Ribeirao Preto;29
+;Hamitabat;206
+;Aden;85
+;Chkalov;170
+;Orenburg;170
+;Orenburg vtoroi;170
+;Jiamusi;96
+;Antipolo;214
+;Antipolo;214
+;Salta;13
+;Chantaburi;195
+;Neijiang;96
+;Bremen;56
+;Meknes;127
+;Sharjah;150
+;Matola;132
+;Changwat Yasothon;195
+;Al-Sharjah;150
+;Comababy;194
+;Sargodha;158
+;Vilnius;110
+;Cancun;130
+;Portland;192
+;MAanshan;96
+;Las Vegas;192
+;Changwat So;195
+;Yangzhou;96
+;Novokuznetsk;170
+;Kisangani;100
+;Bor Saeed;69
+;Warri;142
+;Yongkang;96
+;Tanga;96
+;Oklahoma City;192
+;Jiangmen;96
+;Changwat Nan;195
+;Nashville;192
+;Beura;132
+;Guntur;76
+;Yewang;96
+;Cangzhou;96
+;Vaucluse;217
+;San Salvador;173
+;Changwat Yala;195
+;Torreon;130
+;Dehradun;76
+;Cuiaba;29
+;Khemisset;127
+;López Mateos;130
+;Petaling Jaya;121
+;Ryazan;170
+;Hanover;56
+;Tyumen;170
+;Durgapur;76
+;Tucson;192
+;Quilmes;13
+;Ajmer;76
+;Felicitas Julia;166
+;Changde;96
+;Jiaozuo;96
+;Ulhasnagar;76
+;Kolhapur;76
+;Lipetsk;170
+;Shiliguri;76
+;Gothenburg;226
+;Eskisehir;206
+;Hamadan;80
+;Azadshahr;80
+;Penza;170
+;Changwat Phatthalung;195
+;Changwat Chumphon;195
+;Tembisa;234
+;Changwat Uttaradit;195
+;Nikolaev;209
+;Khenifra;127
+;Naberezhnyye Morkvashi;170
+;Naberezhnye Chelny;170
+;Asuncion;162
+;San Nicolas De Los Garza;130
+;Ear;96
+;Dang;140
+;Toluca;130
+;Niigata;236
+;Duisburg;56
+;Asansol;76
+;Azizal;127
+;Asana;76
+;Arak;80
+;Astrakhan;170
+;Cagayan De Oro City;214
+;Zhuhai;96
+;Gold Coast;1
+;Waren;56
+;Barbouri;195
+;Oshogbo;142
+;Las Pinas;214
+;Shashi;96
+;Reynosa;130
+;Makhachkala;170
+;Newcastle;1
+;Nuremberg;56
+;Khouribga;127
+;Ouarzazate;127
+;Mai Chi;77
+;Tlaquepaque;130
+;Angeles;214
+;Leipzig;56
+;Jamnagar;76
+;Panchiao;196
+;Cibitoke;34
+;Aracaju;29
+;San Pedro Sula;58
+;As Suways;69
+;Albuquerque;192
+;Tomsk;170
+;Matsuyama;236
+;Nanded;76
+;Saharanpur;76
+;Gulbarga;76
+;Bhatpara;76
+;Long Beach;192
+;An NADAF;79
+;Feira De Santana;29
+;Shah Alam;121
+;Himeji;236
+;Tuxtla Gutiérrez;130
+;Gomel;22
+;Dresden;56
+;Ocean;142
+;Uijeongbu;102
+;Hargeisa;188
+;Yusd;80
+;Hargeisa;188
+;Sialkot;158
+;Kemerovo;170
+;Ichan;96
+;The Hague;143
+;Tipaza;5
+;Cuautitlan Izcalli;130
+;Yinchuan;96
+;Skopje;238
+;Vereeniging;234
+;Maoming;96
+;Londrina;29
+;LRH;127
+;Jiaojiang;96
+;Matsudo;236
+;Juiz de fora;29
+;San Juan;13
+;Liverpool;38
+;Nishinomiya;236
+;Tula;170
+;Kawaguchi;236
+;Sacramento;192
+;Shizuoka;236
+;Zuni;96
+;Jiaxing;96
+;Belford Roch;29
+;Jammu;76
+;Dongliao;96
+;Fresno;192
+;Lyon;217
+;Kananga;100
+;Bloemfontein;234
+;Xiangfan;96
+;Gdansk;165
+;Calabar;142
+;Panzhihua;96
+;Joinville;29
+;Zamboanga;214
+;Namah;185
+;Mikso;52
+;Antwerp;23
+;General Santos City;214
+;Bean;214
+;New Orleans;192
+;Kanazawa;236
+;Ichikawa;236
+;School Burley;214
+;Ujjain;76
+;Kirov;170
+;Kota Kinabalu;121
+;Durango;130
+;Niteroi;29
+;Hengshui;96
+;Chitungwiza;74
+;Santa Fe;13
+;Gaby;176
+;Pontianak;77
+;Leeds;38
+;Bacolod City;214
+;Sao Joao De Meriti;29
+;Mansilingan;214
+;Bacolod;214
+;Essaouira;127
+;Manado;77
+;Jining;96
+;Constantine;5
+;Mies;192
+;Utsunomiya;236
+;Urfa;206
+;Cleveland;192
+;Virginia Beach;192
+;Chengde;96
+;Xuchang;96
+;Oita;236
+;Sheffield;38
+;Cheboksary;170
+;Cagayan De Oro;214
+;Boksburg;234
+;Kalat;16
+;Rajpur;76
+;Changwat Krabi;195
+;Amagasaki;236
+;Malatya;206
+;North Kansas City;192
+;Kansas City;192
+;Kansas;192
+;Bakur;214
+;Baur;214
+;Nangi;76
+;Pereira;98
+;Kozhikode;76
+;Carefor;47
+;Iquitos;163
+;Mawlamyine;137
+;Baoji;96
+;Kurashiki;236
+;Garoua;90
+;Mwanza;197
+;Kousseri;90
+;Tirunelveli;76
+;Edinburgh;38
+;Fort Furo;90
+;Malegaon;76
+;Matamoros;130
+;Kaliningrad;170
+;Geneva;225
+;Ananindeua;29
+;Balikpapan;77
+;Brampton;91
+;Dadiangas;214
+;Namangan;208
+;Katsina;142
+;Wellcome;234
+;Santa Marta;98
+;El Mahalla El Kubra;69
+;Bristol;38
+;Yokosuka;236
+;Akol;76
+;Belgium;76

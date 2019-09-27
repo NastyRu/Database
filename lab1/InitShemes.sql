@@ -1,0 +1,6 @@
+USE TourAgency
+GO
+CREATE SCHEMA Location
+GO
+CREATE SCHEMA Agency
+GO
