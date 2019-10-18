@@ -292,21 +292,35 @@ SELECT * FROM Sales_CTE
 ORDER BY SalesYear
 
 -- 23. Инструкция SELECT, использующая рекурсивное обобщенное табличное выражение
-WITH CountriesCities(ClientId) AS
-    (
-        SELECT C.ClientId
-        FROM Agency.ClientsTours AS C
-        WHERE C.NumberChildren = 0
+-- Замена всех слов, чтоб начинались с заглавной буквы
 
-        UNION ALL
+-- ASCII код первой буквы
+WITH Ascii_code AS
+(
+    SELECT ASCII('A') AS code
+),
+-- для регистронезависимых баз данных символы 'a' и 'A' не различаются (замена символов, идущих после пробела, перебор A-Z
+Repl(Name, Code, Rep) AS
+(
+    SELECT NameCountry AS Name,
+           Code,
+           -- первая буква заглавная, остальные строчные и замена всех А (после пробела) на заглавные
+           REPLACE(UPPER(LEFT(NameCountry, 1)) + LOWER(SUBSTRING(NameCountry, 2, LEN(NameCountry) - 1)),' ' + CHAR(Code),' ' + CHAR(Code)) AS Rep
+    FROM Ascii_code, Location.Countries
 
-        SELECT C1.ClientId
-        FROM Agency.Clients AS C1--, CountriesCities AS C2
-        WHERE C1.Surname LIKE 'S%' --AND C1.ClientId = C2.ClientId
-    )
+    UNION ALL
 
-SELECT * FROM CountriesCities
-option (maxrecursion 1)
+    SELECT name,
+           Code + 1 AS Code,
+           -- перебор всех оставшихся букв B-Z
+           REPLACE(Rep, ' ' + CHAR(Code + 1), ' ' + CHAR(Code + 1)) AS Rep
+    FROM Repl
+    -- выполняем пока не дошли до Z
+    WHERE Code < ASCII('Z')
+)
+SELECT Name, Rep
+FROM Repl
+WHERE Code = ASCII('Z')
 
 -- 24. Оконные функции. Использование конструкций MIN/MAX/AVG OVER()
 -- Для каждого заказанного тура выводи среднее, максимальное и минимальное
@@ -327,4 +341,3 @@ WITH cte AS
     )
 DELETE TOP (1000) FROM cte WHERE RN > 1;
 SELECT * FROM SomeTable
-
