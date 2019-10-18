@@ -48,7 +48,7 @@ WHERE Stars = 5 AND
               AND C.HotelId = C1.HotelId
         )
 
--- 6. Инструкция SELECT, использующая предикат сравнения с квантором.
+-- 6. Инструкция SELECT, использующая предикат сравнения с квантором общности (ALL).
 -- Получить список туров в отель 1, цена которых больше цены любого тура в отель 2
 SELECT TourId, Price
 FROM Agency.Tours
@@ -65,8 +65,7 @@ SELECT AVG(TotalPrice) AS 'Actual AVG',
        SUM(TotalPrice) / COUNT(HotelId) AS 'Calc AVG'
 FROM (
          SELECT HotelId, SUM(Price * (NumberAdults + NumberChildren)) AS TotalPrice
-         FROM (Agency.Tours AS C1 JOIN Agency.ClientsTours AS C2 ON C1.TourId = C2.TourId)
-                  JOIN Agency.Clients AS C3 on C2.ClientId = C3.ClientId
+         FROM Agency.Tours AS C1 JOIN Agency.ClientsTours AS C2 ON C1.TourId = C2.TourId
          GROUP BY HotelId
      ) AS TotOrders
 
@@ -143,3 +142,189 @@ WHERE HotelId IN
       )
 SELECT * FROM #ToursRussia
 DROP TABLE #ToursRussia
+
+-- 12. Инструкция SELECT, использующая вложеные коррелированные подзапросы в качестве производных таблиц в предложении FROM
+-- Туры с максимальной и минимальной стоимостью
+SELECT 'MAX' AS Criteria, C.TourId, SQ AS 'Price'
+FROM Agency.Tours AS C JOIN
+    (
+        SELECT TOP 1 C1.TourId, SUM(Price * (NumberAdults + NumberChildren)) AS SQ
+        FROM (Agency.Tours AS C1 JOIN Agency.ClientsTours AS C2 ON C1.TourId = C2.TourId)
+        GROUP BY C1.TourId
+        ORDER BY SQ DESC
+    ) AS OD ON OD.TourId = C.TourId
+UNION
+SELECT 'MIN' AS Criteria, C.TourId, SQ
+FROM Agency.Tours AS C JOIN
+    (
+        SELECT TOP 1 C1.TourId, SUM(Price * (NumberAdults + NumberChildren)) AS SQ
+        FROM (Agency.Tours AS C1 JOIN Agency.ClientsTours AS C2 ON C1.TourId = C2.TourId)
+        GROUP BY C1.TourId
+        ORDER BY SQ
+    ) AS OD ON OD.TourId = C.TourId
+
+-- 13. Инструкция SELECT, использующая вложенные подзапросы с уровнем вложенности 3
+-- Туры с максимальной и минимальной стоимостью
+SELECT 'MAX' AS Criteria, C.TourId
+FROM Agency.Tours AS C
+WHERE TourId =
+    (
+        SELECT C1.TourId
+        FROM Agency.Tours AS C1 JOIN Agency.ClientsTours AS C2 ON C1.TourId = C2.TourId
+        GROUP BY C1.TourId
+        HAVING SUM(Price * (NumberAdults + NumberChildren)) =
+               (
+                    SELECT MAX(SQ)
+                    FROM
+                    (
+                        SELECT SUM(Price * (NumberAdults + NumberChildren)) AS SQ
+                        FROM Agency.Tours JOIN Agency.ClientsTours ON Tours.TourId = ClientsTours.TourId
+                        GROUP BY Tours.TourId
+                    ) AS OD
+                )
+    )
+UNION
+SELECT 'MIN' AS Criteria, C.TourId
+FROM Agency.Tours AS C
+WHERE TourId =
+    (
+        SELECT C1.TourId
+        FROM Agency.Tours AS C1 JOIN Agency.ClientsTours AS C2 ON C1.TourId = C2.TourId
+        GROUP BY C1.TourId
+        HAVING SUM(Price * (NumberAdults + NumberChildren))=
+               (
+                    SELECT MIN(SQ)
+                    FROM
+                    (
+                        SELECT SUM(Price * (NumberAdults + NumberChildren))AS SQ
+                        FROM Agency.Tours JOIN Agency.ClientsTours ON Tours.TourId = ClientsTours.TourId
+                        GROUP BY Tours.TourId
+                    ) AS OD
+                )
+    )
+
+-- 14. Инструкция SELECT, консолидирующая данные с помощью предложения GROUP BY, но без предложения HAVING.
+-- Для каждого тура получить его среднюю цену и минимальную цену
+SELECT C1.TourId,
+       AVG(Price * (NumberAdults + NumberChildren)) AS AvgPrice,
+       MIN(Price * (NumberAdults + NumberChildren)) AS MinPrice
+FROM (Agency.Tours AS C1 JOIN Agency.ClientsTours AS C2 ON C1.TourId = C2.TourId)
+GROUP BY C1.TourId
+
+-- 15. Инструкция SELECT, консолидирующая данные с помощью предложения GROUP BY и предложения HAVING.
+-- Получить список туров, средняя цена которых больше общей средней
+SELECT C.TourId,
+       AVG(Price * (NumberAdults + NumberChildren)) AS AvgPrice
+FROM (Agency.Tours AS C JOIN Agency.ClientsTours ON C.TourId = ClientsTours.TourId)
+GROUP BY C.TourId
+HAVING AVG(Price * (NumberAdults + NumberChildren)) >
+    (
+        SELECT AVG(C1.Price * (C2.NumberAdults + C2.NumberChildren)) AS MPrice
+        FROM (Agency.Tours AS C1 JOIN Agency.ClientsTours AS C2 ON C1.TourId = C2.TourId)
+    )
+
+-- 16. Однострочная инструкция INSERT, выполняющая вставку в таблицу одной строки значений.
+INSERT INTO Agency.Clients VALUES
+('Stepanov', 'Alexander', '89993456510', 'aaaaa@mail.ru')
+
+SELECT * FROM Agency.Clients
+
+-- 17. Многострочная инструкция INSERT, выполняющая вставку в таблицу результирующего набора данных вложенного подзапроса
+INSERT Agency.ClientsTours
+SELECT (
+    SELECT MAX(ClientId)
+    FROM Agency.Clients
+    ), TourId, 2, 0
+FROM TourAgency.Agency.Tours
+WHERE HotelId = 8
+
+SELECT * FROM Agency.ClientsTours
+
+-- 18. Простая инструкция UPDATE.
+SELECT * FROM Agency.Tours
+
+UPDATE Agency.Tours
+SET Price = Price / 1.5
+WHERE TourId = 1
+
+SELECT * FROM Agency.Tours
+
+-- 19. Инструкция UPDATE со скалярным подзапросом в предложении SET.
+SELECT * FROM Agency.Tours
+
+UPDATE Agency.Tours
+SET Price =
+    (
+        SELECT AVG(Price)
+        FROM Agency.Tours
+    )
+WHERE TourId = 1
+
+SELECT * FROM Agency.Tours
+
+-- 20. Простая инструкция DELETE.
+DELETE Agency.Hotels
+WHERE Stars IS NULL
+
+-- 21. Инструкция DELETE с вложенным коррелированным подзапросом в предложении WHERE.
+INSERT INTO Agency.ClientsTours VALUES
+(1,1,1,NULL)
+
+DELETE FROM Agency.ClientsTours
+WHERE ClientId IN
+(
+    SELECT TOP 1 ClientId
+    FROM Agency.ClientsTours
+    WHERE NumberChildren IS NULL
+    ORDER BY ClientId DESC
+)
+
+-- 22. Инструкция SELECT, использующая простое обобщенное табличное выражение
+-- Табличное выражение продаж туров по годам
+WITH Sales_CTE(SalesYear, SalesCount, SalesPrice)
+AS
+    (
+        SELECT YEAR(BeginingDate) AS SalesYear, COUNT(C1.TourId), SUM(Price * (NumberChildren + NumberAdults))
+        FROM Agency.Tours AS C1 JOIN Agency.ClientsTours AS C2 ON C1.TourId = C2.TourId
+        GROUP BY YEAR(BeginingDate)
+    )
+SELECT * FROM Sales_CTE
+ORDER BY SalesYear
+
+-- 23. Инструкция SELECT, использующая рекурсивное обобщенное табличное выражение
+WITH CountriesCities(ClientId) AS
+    (
+        SELECT C.ClientId
+        FROM Agency.ClientsTours AS C
+        WHERE C.NumberChildren = 0
+
+        UNION ALL
+
+        SELECT C1.ClientId
+        FROM Agency.Clients AS C1--, CountriesCities AS C2
+        WHERE C1.Surname LIKE 'S%' --AND C1.ClientId = C2.ClientId
+    )
+
+SELECT * FROM CountriesCities
+option (maxrecursion 1)
+
+-- 24. Оконные функции. Использование конструкций MIN/MAX/AVG OVER()
+-- Для каждого заказанного тура выводи среднее, максимальное и минимальное
+SELECT P.TourId,
+       P.Price * (NumberChildren + NumberAdults) AS Price,
+    AVG(P.Price * (NumberChildren + NumberAdults)) OVER(PARTITION BY P.TourId) AS AvgPrice,
+    MIN(P.Price * (NumberChildren + NumberAdults)) OVER(PARTITION BY P.TourId) AS MinPrice,
+    MAX(P.Price * (NumberChildren + NumberAdults)) OVER(PARTITION BY P.TourId) AS MaxPrice
+INTO SomeTable
+FROM Agency.Tours P JOIN Agency.ClientsTours OD ON OD.TourId = P.TourId
+
+-- 25. Устранить дублирующиеся строки с использованием функции ROW_NUMBER()
+WITH cte AS
+    (
+        SELECT
+            RN = ROW_NUMBER() OVER (PARTITION BY TourId, Price, AvgPrice, MinPrice, MaxPrice ORDER BY TourId)
+        FROM SomeTable
+    )
+DELETE TOP (1000) FROM cte WHERE RN > 1;
+SELECT * FROM SomeTable
+

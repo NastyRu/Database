@@ -17,7 +17,7 @@ ALTER TABLE Agency.Hotels ADD
 GO
 
 ALTER TABLE Agency.Clients ADD
-    CONSTRAINT [PK_Client] PRIMARY KEY (ClientId)
+    CONSTRAINT [PK_Client] PRIMARY KEY CLUSTERED (ClientId ASC)
 GO
 
 ALTER TABLE Agency.Tours ADD
