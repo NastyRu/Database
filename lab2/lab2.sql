@@ -326,9 +326,9 @@ WHERE Code = ASCII('Z')
 -- Для каждого заказанного тура выводи среднее, максимальное и минимальное
 SELECT P.TourId,
        P.Price * (NumberChildren + NumberAdults) AS Price,
-    AVG(P.Price * (NumberChildren + NumberAdults)) OVER(PARTITION BY P.TourId) AS AvgPrice,
-    MIN(P.Price * (NumberChildren + NumberAdults)) OVER(PARTITION BY P.TourId) AS MinPrice,
-    MAX(P.Price * (NumberChildren + NumberAdults)) OVER(PARTITION BY P.TourId) AS MaxPrice
+       AVG(P.Price * (NumberChildren + NumberAdults)) OVER(PARTITION BY P.TourId) AS AvgPrice,
+       MIN(P.Price * (NumberChildren + NumberAdults)) OVER(PARTITION BY P.TourId) AS MinPrice,
+       MAX(P.Price * (NumberChildren + NumberAdults)) OVER(PARTITION BY P.TourId) AS MaxPrice
 INTO SomeTable
 FROM Agency.Tours P JOIN Agency.ClientsTours OD ON OD.TourId = P.TourId
 
