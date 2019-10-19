@@ -322,6 +322,30 @@ SELECT Name, Rep
 FROM Repl
 WHERE Code = ASCII('Z')
 
+-- Часовые пояса
+ALTER TABLE Location.Cities ADD TimeZone INT NULL
+UPDATE Location.Cities
+SET Cities.TimeZone = abs(1 + checksum(NewId()) % (CityId - 1))
+WHERE Cities.TimeZone IS NOT NULL
+
+SELECT * FROM Location.Cities
+
+UPDATE Location.Cities
+SET Cities.TimeZone = NULL
+WHERE Cities.CityId = 1
+
+WITH Time(CityId, NameCity, CountryId, TimeZone, Now)
+AS
+(
+    SELECT CityId, NameCity, CountryId, TimeZone, CAST(FORMAT(GETDATE(),'hh') AS INT) AS Now
+    FROM Location.Cities WHERE TimeZone IS NULL
+
+    UNION ALL
+    SELECT C1.CityId, C1.NameCity, C1.CountryId, C1.TimeZone, C2.Now + 1
+    FROM Location.Cities AS C1 JOIN Time AS C2 ON C1.TimeZone = C2.CityId
+)
+SELECT * FROM Time
+
 -- 24. Оконные функции. Использование конструкций MIN/MAX/AVG OVER()
 -- Для каждого заказанного тура выводи среднее, максимальное и минимальное
 SELECT P.TourId,
@@ -336,7 +360,7 @@ FROM Agency.Tours P JOIN Agency.ClientsTours OD ON OD.TourId = P.TourId
 WITH cte AS
     (
         SELECT
-            RN = ROW_NUMBER() OVER (PARTITION BY TourId, Price, AvgPrice, MinPrice, MaxPrice ORDER BY TourId)
+            RN = ROW_NUMBER() OVER(PARTITION BY TourId, Price, AvgPrice, MinPrice, MaxPrice ORDER BY TourId)
         FROM SomeTable
     )
 DELETE TOP (1000) FROM cte WHERE RN > 1;
