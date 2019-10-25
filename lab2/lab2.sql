@@ -325,7 +325,7 @@ WHERE Code = ASCII('Z')
 -- Часовые пояса
 ALTER TABLE Location.Cities ADD TimeZone INT NULL
 UPDATE Location.Cities
-SET Cities.TimeZone = abs(1 + checksum(NewId()) % (CityId - 1))
+SET Cities.TimeZone = ABS(CHECKSUM(NEWID()) % (CityId - 1)) + 1
 WHERE Cities.TimeZone IS NOT NULL
 
 SELECT * FROM Location.Cities
