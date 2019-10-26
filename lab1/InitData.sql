@@ -37,5 +37,3 @@ FROM '\clientstours.txt'
 WITH (FIELDTERMINATOR = ';', ROWTERMINATOR = '0x0a');
 
 GO
-
-select * from Agency.ClientsTours

@@ -17,6 +17,10 @@ END
 
 GO
 
+declare @i int
+SET @i = dbo.count_clients('HELENA PARK')
+print @i
+
 SELECT dbo.count_clients('HELENA PARK') AS 'Count clients'
 
 -- Подставляемая табличная функция
@@ -190,7 +194,11 @@ access_to_metadata Tours
 CREATE TRIGGER wow
 ON Agency.Clients
 AFTER INSERT
-AS PRINT 'New client!!!'
+AS
+    BEGIN
+        SELECT * FROM inserted
+        PRINT 'New client!!!'
+    END
 GO
 
 INSERT Agency.Clients VALUES ('Ivanov', 'Ivan', '89992346510', 'ivanovivan@mail.ru')
@@ -198,7 +206,19 @@ INSERT Agency.Clients VALUES ('Ivanov', 'Ivan', '89992346510', 'ivanovivan@mail.
 -- Триггер INSTEAD OF
 CREATE TRIGGER no_insert
 ON Location.Countries
-INSTEAD OF INSERT, UPDATE
-AS RAISERROR ('No able to insert!', 16, 10)
+INSTEAD OF INSERT, UPDATE, DELETE
+AS
+    BEGIN
+        SELECT * FROM inserted
+        SELECT * FROM deleted
+        RAISERROR ('No able to insert!', 16, 10)
+    END
 
 INSERT Location.Countries VALUES ('Aaa')
+
+UPDATE Location.Countries
+SET NameCountry = 'aaa'
+WHERE CountryId = 1
+
+DELETE Location.Countries
+WHERE CountryId = 1
