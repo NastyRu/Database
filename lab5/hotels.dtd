@@ -1,0 +1,9 @@
+<!ELEMENT Root (C+)>
+
+<!ELEMENT C>
+
+<!ATTLIST C
+          NameHotel (#PCDATA) #REQUIRED
+          Stars (#PCDATA) #REQUIRED
+          Food (#PCDATA) #REQUIRED
+          CityId (#PCDATA) #REQUIRED>
