@@ -11,7 +11,7 @@ class XmlSchemaSetExample
         Settings.ValidationType = ValidationType.Schema;
         Settings.ValidationEventHandler += new ValidationEventHandler(settingsValidationEventHandler);
 
-        XmlReader hotels = XmlReader.Create("1.xml", Settings);
+        XmlReader hotels = XmlReader.Create("example.xml", Settings);
 
         while (hotels.Read()) { }
         Console.Write("Validation end!\n");
