@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<library>
+  <country Id="156" Name="About Christmas" />
+  <country Id="17" Name="Afghanistan" />
+  <country Id="5" Name="Albania" />
+  <country Id="6" Name="Algeria" />
+  <country Id="9" Name="Andorra" />
+  <country Id="8" Name="Angola" />
+  <country Id="7" Name="Anguilla" />
+  <country Id="10" Name="Antarctic" />
+  <country Id="11" Name="Antigua.Barb" />
+  <country Id="12" Name="Antilles" />
+  <country Id="13" Name="Aomen Macau" />
+  <country Id="14" Name="Argentina" />
+  <country Id="15" Name="Armenia" />
+  <country Id="16" Name="Aruba" />
+  <country Id="2" Name="Australia" />
+  <country Id="3" Name="Austria" />
+  <country Id="4" Name="Azerbaijan" />
+  <country Id="18" Name="Bahamas" />
+  <country Id="21" Name="Bahrain" />
+  <country Id="19" Name="Bangladesh" />
+  <country Id="20" Name="Barbados" />
+  <country Id="23" Name="Belarus" />
+  <country Id="24" Name="Belgium" />
+  <country Id="22" Name="Belize" />
+  <country Id="25" Name="Benin" />
+  <country Id="36" Name="Bhutan" />
+  <country Id="28" Name="Bolivia" />
+  <country Id="240" Name="Bosnia and Herzegovina" />
+  <country Id="29" Name="Botswana" />
+  <country Id="33" Name="Bouvet" />
+  <country Id="30" Name="Brazil" />
+  <country Id="39" Name="Britain" />
+  <country Id="32" Name="Brunei" />
+  <country Id="27" Name="Bulgaria" />
+  <country Id="34" Name="Burkina Faso" />
+  <country Id="35" Name="Burundi" />
+  <country Id="90" Name="Cambodia" />
+  <country Id="91" Name="Cameroon" />
+  <country Id="92" Name="Canada" />
+  <country Id="87" Name="Cape Verde" />
+  <country Id="89" Name="Cayman" />
+  <country Id="222" Name="Center. Adf. Republican" />
+  <country Id="223" Name="Chad" />
+  <country Id="225" Name="Chile" />
+  <country Id="97" Name="China" />
+  <country Id="98" Name="Cocos Islands" />
+  <country Id="99" Name="Colombia" />
+  <country Id="100" Name="Comoros" />
+  <country Id="101" Name="Congo" />
+  <country Id="104" Name="Costa Rica" />
+  <country Id="105" Name="Cote Divoire" />
+  <country Id="239" Name="Croatia" />
+  <country Id="106" Name="Cuba" />
+  <country Id="95" Name="Cyprus" />
+  <country Id="224" Name="Czech Republic" />
+  <country Id="65" Name="Denmark" />
+  <country Id="66" Name="Djibouti" />
+  <country Id="68" Name="Dominica" />
+  <country Id="69" Name="Dominicans. Resp." />
+  <country Id="45" Name="East Timor" />
+  <country Id="44" Name="Eastern. Samoa. USA" />
+  <country Id="230" Name="Ecuador" />
+  <country Id="70" Name="Egypt" />
+  <country Id="231" Name="Equator. Guinea" />
+  <country Id="232" Name="Estonia" />
+  <country Id="233" Name="Ethiopia" />
+  <country Id="217" Name="Falkland Islands" />
+  <country Id="213" Name="Faroe Islands" />
+  <country Id="214" Name="Fiji" />
+  <country Id="216" Name="Finland" />
+  <country Id="219" Name="Fra. Polynesia" />
+  <country Id="220" Name="Fra. Southern Territory." />
+  <country Id="218" Name="France" />
+  <country Id="47" Name="Gabon" />
+  <country Id="50" Name="Gambia" />
+  <country Id="63" Name="Georgia" />
+  <country Id="57" Name="Germany" />
+  <country Id="51" Name="Ghana" />
+  <country Id="58" Name="Gibraltar" />
+  <country Id="62" Name="Greece" />
+  <country Id="61" Name="Greenland" />
+  <country Id="60" Name="Grenada" />
+  <country Id="52" Name="Guadeloupe" />
+  <country Id="64" Name="GUAM" />
+  <country Id="53" Name="Guatemala" />
+  <country Id="54" Name="Guiana" />
+  <country Id="55" Name="Guinea" />
+  <country Id="56" Name="Guinea Bissau" />
+  <country Id="49" Name="Guyana" />
+  <country Id="48" Name="Haiti" />
+  <country Id="221" Name="Heard And McDonald" />
+  <country Id="59" Name="Honduras" />
+  <country Id="194" Name="Hong Kong Hong Kong" />
+  <country Id="40" Name="Hungary" />
+  <country Id="83" Name="Iceland" />
+  <country Id="155" Name="In Isle Of Man" />
+  <country Id="158" Name="In The Wake" />
+  <country Id="77" Name="India" />
+  <country Id="78" Name="Indonesia" />
+  <country Id="81" Name="Iran" />
+  <country Id="80" Name="Iraq" />
+  <country Id="82" Name="Ireland" />
+  <country Id="153" Name="Islands Cook" />
+  <country Id="154" Name="Islands Midway" />
+  <country Id="76" Name="Israel" />
+  <country Id="85" Name="Italy" />
+  <country Id="236" Name="Jamaica" />
+  <country Id="237" Name="Japan" />
+  <country Id="67" Name="Johnston Atoll" />
+  <country Id="79" Name="Jordan" />
+  <country Id="88" Name="Kazakhstan" />
+  <country Id="94" Name="Kenya" />
+  <country Id="96" Name="Kiribati" />
+  <country Id="102" Name="Korea DPRK" />
+  <country Id="103" Name="Korea Rep." />
+  <country Id="107" Name="Kuwait" />
+  <country Id="108" Name="Kyrgyzstan" />
+  <country Id="109" Name="Laos" />
+  <country Id="110" Name="Latvia" />
+  <country Id="114" Name="Lebanon" />
+  <country Id="112" Name="Lesotho" />
+  <country Id="113" Name="Liberia" />
+  <country Id="115" Name="Libya" />
+  <country Id="116" Name="Liechtenstein" />
+  <country Id="111" Name="Lithuania" />
+  <country Id="117" Name="Luxembourg" />
+  <country Id="120" Name="Madagascar" />
+  <country Id="121" Name="Malawi" />
+  <country Id="122" Name="Malaysia" />
+  <country Id="125" Name="Maldives" />
+  <country Id="123" Name="Mali" />
+  <country Id="126" Name="Malta" />
+  <country Id="127" Name="Mariana Islands" />
+  <country Id="130" Name="Marshall Islands" />
+  <country Id="129" Name="Martinique" />
+  <country Id="119" Name="Mauritania" />
+  <country Id="118" Name="Mauritius" />
+  <country Id="131" Name="Mexico" />
+  <country Id="132" Name="Micronesia" />
+  <country Id="134" Name="Moldova" />
+  <country Id="135" Name="Monaco" />
+  <country Id="136" Name="Mongolia" />
+  <country Id="137" Name="Montserrat" />
+  <country Id="128" Name="Morocco" />
+  <country Id="133" Name="Mozambique" />
+  <country Id="138" Name="Myanmar" />
+  <country Id="139" Name="Namibia" />
+  <country Id="140" Name="Nauru" />
+  <country Id="141" Name="Nepal" />
+  <country Id="144" Name="Netherlands" />
+  <country Id="147" Name="New Zealand" />
+  <country Id="148" Name="New. Caledonia" />
+  <country Id="145" Name="Nicaragua" />
+  <country Id="142" Name="Niger" />
+  <country Id="143" Name="Nigeria" />
+  <country Id="146" Name="Niue" />
+  <country Id="150" Name="Norfolk" />
+  <country Id="149" Name="Norway" />
+  <country Id="151" Name="OAE" />
+  <country Id="152" Name="Oman" />
+  <country Id="159" Name="Pakistan" />
+  <country Id="160" Name="Palau" />
+  <country Id="161" Name="Panama" />
+  <country Id="162" Name="papua new guinea" />
+  <country Id="163" Name="Paraguay" />
+  <country Id="164" Name="Peru" />
+  <country Id="215" Name="Philippines" />
+  <country Id="165" Name="Pitcairn" />
+  <country Id="166" Name="Poland" />
+  <country Id="167" Name="Portugal" />
+  <country Id="168" Name="Puerto rico" />
+  <country Id="93" Name="Qatar" />
+  <country Id="170" Name="Reunion" />
+  <country Id="173" Name="Romania" />
+  <country Id="171" Name="Russia" />
+  <country Id="172" Name="Rwanda" />
+  <country Id="182" Name="S. Vincent. Grenada's." />
+  <country Id="180" Name="S.-Pierre And Miquelon" />
+  <country Id="183" Name="Saint Kitts And Nevis" />
+  <country Id="184" Name="Saint Lucia" />
+  <country Id="174" Name="Salvador" />
+  <country Id="175" Name="san marino" />
+  <country Id="176" Name="Sao Tome And Prince." />
+  <country Id="177" Name="Saudi Arabia" />
+  <country Id="181" Name="Senegal" />
+  <country Id="238" Name="Serbia" />
+  <country Id="179" Name="Seychelles" />
+  <country Id="169" Name="Shared Zone" />
+  <country Id="192" Name="Sierra Leone" />
+  <country Id="185" Name="Singapore" />
+  <country Id="187" Name="Slovakia" />
+  <country Id="124" Name="Small. Tikhook. Islands" />
+  <country Id="31" Name="Smoothfaced. Rubbed. In Ind." />
+  <country Id="188" Name="Solomon Islands" />
+  <country Id="189" Name="Somalia" />
+  <country Id="235" Name="South AFR. Respub." />
+  <country Id="84" Name="Spain" />
+  <country Id="229" Name="Sri Lanka" />
+  <country Id="157" Name="St. Helena" />
+  <country Id="190" Name="Sudan" />
+  <country Id="191" Name="Suriname" />
+  <country Id="228" Name="Svalbard And Jan Maye" />
+  <country Id="178" Name="Swaziland" />
+  <country Id="227" Name="Sweden" />
+  <country Id="226" Name="Switzerland" />
+  <country Id="186" Name="Syria" />
+  <country Id="197" Name="Taiwan" />
+  <country Id="195" Name="Tajikistan" />
+  <country Id="198" Name="Tanzania" />
+  <country Id="196" Name="Thailand" />
+  <country Id="26" Name="The Bermuda Islands" />
+  <country Id="200" Name="Togo" />
+  <country Id="201" Name="Tokelau Union" />
+  <country Id="202" Name="Tonga" />
+  <country Id="203" Name="Trinidad And Tobago" />
+  <country Id="205" Name="Tunisia" />
+  <country Id="207" Name="Turkey" />
+  <country Id="206" Name="Turkmenistan" />
+  <country Id="199" Name="Turks And Caicos" />
+  <country Id="204" Name="Tuvalu" />
+  <country Id="208" Name="Uganda" />
+  <country Id="210" Name="Ukraine" />
+  <country Id="212" Name="Uruguay" />
+  <country Id="193" Name="USA" />
+  <country Id="209" Name="Uzbekistan" />
+  <country Id="37" Name="Vanuatu" />
+  <country Id="38" Name="Vatican" />
+  <country Id="41" Name="Venezuela" />
+  <country Id="46" Name="Vietnam" />
+  <country Id="43" Name="Virgin. Islands Brit." />
+  <country Id="42" Name="Virgin. Islands USA" />
+  <country Id="211" Name="Wallis And Futuna" />
+  <country Id="73" Name="Western Sahara" />
+  <country Id="74" Name="Western Samoa" />
+  <country Id="86" Name="Yemen" />
+  <country Id="234" Name="Yugoslavia" />
+  <country Id="71" Name="Zaire" />
+  <country Id="72" Name="Zambia" />
+  <country Id="75" Name="Zimbabwe" />
+  <country Id="241" Name="NewCountry" />
+</library>

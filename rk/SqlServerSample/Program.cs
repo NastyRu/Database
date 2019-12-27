@@ -54,7 +54,7 @@ class Program
         SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
         builder.DataSource = "localhost";
         builder.UserID = "sa";
-        builder.Password = "Marvel1405potteR";
+        builder.Password = "password";
         builder.InitialCatalog = "RK2";
 
 // отделы, в которых хоть один ни разу не опоздал за всю историю учета
