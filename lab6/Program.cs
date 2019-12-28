@@ -6,13 +6,14 @@ using System.Linq;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
 using System.Xml.Linq;
+using System.Reflection;
 
 namespace Countries
 {
     [Table(Name = "Location.Countries")]
     public class Country
     {
-        [Column(Name = "CountryId")]
+        [Column(Name = "CountryId", IsDbGenerated = true)]
         public int Id { get; set; }
         [Column(Name = "NameCountry")]
         public string Name { get; set; }
@@ -24,7 +25,7 @@ namespace Cities
     [Table(Name = "Location.Cities")]
     public class City
     {
-        [Column(Name = "CityId")]
+        [Column(Name = "CityId", IsDbGenerated = true)]
         public int Id { get; set; }
         [Column(Name = "NameCity")]
         public string Name { get; set; }
@@ -38,7 +39,7 @@ namespace Hotels
     [Table(Name = "Agency.Hotels")]
     public class Hotel
     {
-        [Column(Name = "HotelId")]
+        [Column(Name = "HotelId", IsDbGenerated = true)]
         public int Id { get; set; }
         [Column(Name = "NameHotel")]
         public string Name { get; set; }
@@ -56,7 +57,7 @@ namespace Tours
     [Table(Name = "Agency.Tours")]
     public class Tour
     {
-        [Column(Name = "TourId")]
+        [Column(Name = "TourId", IsDbGenerated = true)]
         public int Id { get; set; }
         [Column(Name = "Price")]
         public int Price { get; set; }
@@ -74,7 +75,7 @@ namespace Clients
     [Table(Name = "Agency.Clients")]
     public class Client
     {
-        [Column(Name = "ClientId")]
+        [Column(Name = "ClientId", IsDbGenerated = true, IsPrimaryKey = true)]
         public int Id { get; set; }
         [Column(Name = "Surname")]
         public string Surname { get; set; }
@@ -181,31 +182,151 @@ public class Sql
            Console.WriteLine("{0} {1}", r.Id, r.Name);
     }
 
-    public static void AddClient(string Surname, string Name, string Phone, string Email)
+    public static void AddClient(ref DataContext db, string surname, string name, string phone, string email)
     {
+        Console.WriteLine();
+        Console.WriteLine("До добавления");
+        Table<Clients.Client> clients = db.GetTable<Clients.Client>();
 
-      [Column(Name = "ClientId")]
-      public int Id { get; set; }
-      [Column(Name = "Surname")]
-      public string Surname { get; set; }
-      [Column(Name = "Name")]
-      public string Name { get; set; }
-      [Column(Name = "PhoneNumber")]
-      public string Phone { get; set; }
-      [Column(Name = "Email")]
-      public string Email { get; set; }
+        foreach (var cl in db.GetTable<Clients.Client>().OrderByDescending(u => u.Id).Take(5))
+        {
+            Console.WriteLine("{0} \t{1} \t{2} \t{3} \t{4}", cl.Id, cl.Surname, cl.Name, cl.Phone, cl.Email);
+        }
 
-        User user1 = new User { FirstName = "Ronald", Age = 34 };
-        // добавляем его в таблицу Users
-        db.GetTable<User>().InsertOnSubmit(user1);
+        Clients.Client client = new Clients.Client { Surname = surname, Name = name, Phone = phone, Email = email };
+        db.GetTable<Clients.Client>().InsertOnSubmit(client);
         db.SubmitChanges();
 
         Console.WriteLine();
         Console.WriteLine("После добавления");
-        foreach (var user in db.GetTable<User>().OrderByDescending(u => u.Id).Take(5))
+        foreach (var cl in db.GetTable<Clients.Client>().OrderByDescending(u => u.Id).Take(5))
         {
-            Console.WriteLine("{0} \t{1} \t{2}", user.Id, user.FirstName, user.Age);
+            Console.WriteLine("{0} \t{1} \t{2} \t{3} \t{4}", cl.Id, cl.Surname, cl.Name, cl.Phone, cl.Email);
         }
+    }
+
+    public static void ChangeClientEmail(ref DataContext db, string email)
+    {
+        Console.WriteLine();
+        Console.WriteLine("До изменения");
+        Table<Clients.Client> clients = db.GetTable<Clients.Client>();
+
+        foreach (var cl in db.GetTable<Clients.Client>().OrderByDescending(u => u.Id).Take(5))
+        {
+            Console.WriteLine("{0} \t{1} \t{2} \t{3} \t{4}", cl.Id, cl.Surname, cl.Name, cl.Phone, cl.Email);
+        }
+
+        Clients.Client client = db.GetTable<Clients.Client>().OrderByDescending(u => u.Id).FirstOrDefault();
+        client.Email = email;
+        db.SubmitChanges();
+
+        Console.WriteLine();
+        Console.WriteLine("После изменения");
+        foreach (var cl in db.GetTable<Clients.Client>().OrderByDescending(u => u.Id).Take(5))
+        {
+            Console.WriteLine("{0} \t{1} \t{2} \t{3} \t{4}", cl.Id, cl.Surname, cl.Name, cl.Phone, cl.Email);
+        }
+    }
+
+    public static void DeleteClient(ref DataContext db)
+    {
+        Console.WriteLine();
+        Console.WriteLine("До удаления");
+        Table<Clients.Client> clients = db.GetTable<Clients.Client>();
+
+        foreach (var cl in db.GetTable<Clients.Client>().OrderByDescending(u => u.Id).Take(5))
+        {
+            Console.WriteLine("{0} \t{1} \t{2} \t{3} \t{4}", cl.Id, cl.Surname, cl.Name, cl.Phone, cl.Email);
+        }
+
+        Clients.Client client = db.GetTable<Clients.Client>().OrderByDescending(u => u.Id).FirstOrDefault();
+        clients.DeleteOnSubmit(client);
+        db.SubmitChanges();
+
+        Console.WriteLine();
+        Console.WriteLine("После удаления");
+        foreach (var cl in db.GetTable<Clients.Client>().OrderByDescending(u => u.Id).Take(5))
+        {
+            Console.WriteLine("{0} \t{1} \t{2} \t{3} \t{4}", cl.Id, cl.Surname, cl.Name, cl.Phone, cl.Email);
+        }
+    }
+}
+
+public class UserDataContext : DataContext
+{
+    public UserDataContext(string connectionString) :base(connectionString) { }
+    [Function(Name = "dbo.find_clients")]
+    public int FindClients([Parameter(Name = "Num", DbType = "Int")] int Num,
+                           [Parameter(Name = "CountClients", DbType = "Int")] ref int count)
+    {
+        IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), Num, count);
+        count = ((int)(result.GetParameterValue(1)));
+        return ((int)(result.ReturnValue));
+    }
+}
+
+public class SqlLinq
+{
+    public static void sql1(Table<Countries.Country> countries)
+    {
+        var res = countries.Where(u => u.Name.Contains("al"));
+
+        foreach (var r in res)
+        {
+            Console.WriteLine("{0} \t{1}", r.Id, r.Name);
+        }
+    }
+
+    public static void sql2(string str, Table<Countries.Country> countries, Table<Cities.City> cities)
+    {
+        var joined = countries.Join(cities,
+            co => co.Id,
+            ci => ci.CountryId,
+            (co, ci) => new { Id = ci.Id, Name = ci.Name, CountryName = co.Name });
+
+        var result = joined.Where(r => r.CountryName == str);
+
+        foreach (var r in result)
+           Console.WriteLine("{0} {1}", r.Id, r.Name);
+    }
+
+    public static void sql3(Table<Countries.Country> countries, Table<Cities.City> cities)
+    {
+        var joined = countries.Join(cities,
+            co => co.Id,
+            ci => ci.CountryId,
+            (co, ci) => new { Id = ci.Id, Name = ci.Name, CountryName = co.Name });
+
+        var query = joined.GroupBy(u => u.CountryName);
+        foreach (var group in query)
+        {
+            Console.WriteLine("Страна: {0}", group.Key);
+            foreach (var user in group)
+                Console.WriteLine(user.Name);
+            Console.WriteLine();
+        }
+    }
+
+    public static void sql4(Table<Hotels.Hotel> hotels)
+    {
+        var res = hotels.Where(u => u.Stars > 4).OrderBy(u => u.Name);
+
+        foreach (var r in res)
+        {
+            Console.WriteLine("{0} \t{1}", r.Id, r.Name);
+        }
+    }
+
+    public static void sql5(Table<Tours.Tour> tours, Table<ClientsTours.ClientTour> clienttours)
+    {
+        var joined = tours.Join(clienttours,
+            t => t.Id,
+            tc => tc.TourId,
+            (t, tc) => new { Id = t.Id, Adults = tc.Adults, Children = tc.Children, Price = t.Price });
+
+        var res = joined.Max(u => (u.Adults + u.Children) * u.Price);
+
+        Console.WriteLine(res);
     }
 }
 
@@ -218,11 +339,11 @@ class Program
         builder.UserID = "sa";
         builder.Password = "Marvel1405potteR";
         builder.InitialCatalog = "TourAgency";
-        Console.WriteLine("Hello World!");
 
         try
         {
             DataContext db = new DataContext(builder.ConnectionString);
+            db.ObjectTrackingEnabled = true;
             Table<Countries.Country> countries = db.GetTable<Countries.Country>();
             Table<Cities.City> cities = db.GetTable<Cities.City>();
             Table<Hotels.Hotel> hotels = db.GetTable<Hotels.Hotel>();
@@ -240,7 +361,20 @@ class Program
             // города России
             Sql.CitiesFromCountry(countries, cities, "Russia");
 
+            Sql.AddClient(ref db, "AAA", "aaa", "88888888888", "aaaa@mail.ru");
+            Sql.ChangeClientEmail(ref db, "aa@yandex.ru");
+            Sql.DeleteClient(ref db);
 
+            UserDataContext udb = new UserDataContext(builder.ConnectionString);
+            int count = 0;
+            udb.FindClients(2, ref count);
+            Console.WriteLine("Клиенты сделавшие {0} заказа: {1}", 2, count);
+
+            SqlLinq.sql1(countries);
+            SqlLinq.sql2("Argentina", countries, cities);
+            SqlLinq.sql3(countries, cities);
+            SqlLinq.sql4(hotels);
+            SqlLinq.sql5(tours, clienttour);
         }
         catch (SqlException e)
         {

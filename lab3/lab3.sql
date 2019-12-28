@@ -112,16 +112,24 @@ FROM dbo.find_time('Moscow')
 
 -- Хранимая процедура без параметров или с параметрами
 -- Клиенты сделавшие заказов
-CREATE PROCEDURE dbo.find_clients(@Num INT)
+CREATE PROCEDURE dbo.find_clients
+    @Num INT,
+    @CountClients INT OUTPUT
 AS
-    SELECT C2.ClientId, Name, Surname, COUNT(C1.TourId) AS Count
-    FROM (Agency.Tours AS C1 JOIN Agency.ClientsTours AS C2 ON C1.TourId = C2.TourId)
+    SELECT @CountClients = Count(*)
+    FROM (
+             SELECT C2.ClientId, Name, Surname, COUNT(C1.TourId) AS Count
+             FROM (Agency.Tours AS C1 JOIN Agency.ClientsTours AS C2 ON C1.TourId = C2.TourId)
                       JOIN Agency.Clients AS C3 on C2.ClientId = C3.ClientId
-    GROUP BY C2.ClientId, Name, Surname
-    HAVING COUNT(C1.TourId) > @Num
+             GROUP BY C2.ClientId, Name, Surname
+             HAVING COUNT(C1.TourId) > @Num
+         ) AS M
 GO
 
-dbo.find_clients 1
+
+declare @i int
+EXEC dbo.find_clients 2, @i OUTPUT
+print @i
 
 -- Рекурсивная хранимая процедура или хранимая процедур с рекурсивным ОТВ
 -- Вывод клиентов с именами из диапазона
