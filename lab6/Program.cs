@@ -337,7 +337,7 @@ class Program
         SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
         builder.DataSource = "localhost";
         builder.UserID = "sa";
-        builder.Password = "Marvel1405potteR";
+        builder.Password = "password";
         builder.InitialCatalog = "TourAgency";
 
         try
